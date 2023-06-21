@@ -1,0 +1,92 @@
+package person;
+
+
+public class student {
+    private String name;
+    private int id;
+    private String course;
+   
+    public void setname(String x)
+    {
+        name=x;
+    }
+    public String getname()
+    {
+        return name;
+    }
+   
+    public void setid(int y)
+    {
+        id=y;
+    }
+    public int getid()
+    {
+        return id;
+    }
+    public void setcourse(String z)
+    {
+        course=z;
+    }
+    public String getcourse()
+    {
+        return course;
+    }
+}
+package person;
+
+
+public class lecture extends student {
+    private String name;
+    private int id;
+    private String programme;
+    public void setlname(String a)
+    {
+        name=a;
+    }
+    public String getlname()
+    {
+        return name;
+    }
+    public void setlid(int b)
+    {
+        id=b;
+    }
+    public int getlid()
+    {
+        return id;
+    }
+    public void setlprogramme(String c)
+    {
+        programme=c;
+       
+    }
+    public String getlprogramme()
+    {
+        return programme;
+    }
+   
+}
+package person;
+
+
+public class Person {
+
+   
+    public static void main(String[] args) {
+        lecture s1=new lecture();
+        s1.setname("Dasun");
+        s1.setid(28245);
+        s1.setcourse("Softwear Engineering");
+        System.out.println("Name is"+s1.getname());
+        System.out.println("Id is"+s1.getid());
+        System.out.println("Course is "+s1.getcourse());
+s1.setlname("Safraz");
+        s1.setlid(101);
+        s1.setlprogramme("Java");
+        System.out.println("Lecturer name is"+s1.getlname());
+        System.out.println("Lcturer id is"+s1.getlid());
+        System.out.println("Programme is "+s1.getlprogramme());
+    }
+   
+}
+
