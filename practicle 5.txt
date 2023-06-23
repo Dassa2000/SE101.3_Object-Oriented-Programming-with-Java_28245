@@ -1,0 +1,68 @@
+//Bankaccount
+package javaapplication15;
+abstract class Bankaccount {
+    private int acnumber;
+    private float balance;
+    public abstract void calculateInterest();
+    public void setacnum(int x)
+    {
+        acnumber=x;
+    }
+    public int getacnum()
+    {
+        return acnumber;
+    }
+    public void setbalance(float y)
+    {
+        balance=y;
+    }
+    public float getbalance()
+    {
+        return balance;
+    }
+    public abstract double ee();
+    public void display()
+    {
+        System.out.println(""+ee());
+    }
+   
+   
+   
+   
+}
+//Savingsaccount
+package javaapplication15;
+
+
+public class SavingsAccount extends Bankaccount
+{
+    public static final double irate=0.12;
+    double interest;
+   
+    public void calculateInterest()
+    {
+        interest=getbalance()*irate;
+    }
+    public double ee()
+    {
+        return interest;
+    }
+}
+//Checkingaccount
+package javaapplication15;
+
+
+public class CheckingAccount extends Bankaccount {
+    public static final double irate=0.02;
+    double interest;
+   
+    public void calculateInterest()
+    {
+        interest=getbalance()*irate;
+    }
+    public double ee()
+    {
+        return interest;
+    }
+   
+}
